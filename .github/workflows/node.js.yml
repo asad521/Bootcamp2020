@@ -13,12 +13,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    
+   
     steps:
     - uses: actions/checkout@v2
     
@@ -27,12 +23,12 @@ jobs:
       
       
     - name: GitHub Action for Yarn
-    - uses: Borales/actions-yarn@v2.3.0
+      uses: Borales/actions-yarn@v2.3.0
       with:
     # Yarn command
        cmd: install
     - name: build production
-      run : npm build
+      run : yarn build
         
     - name: intalling surge
       run : npm install -g surge
