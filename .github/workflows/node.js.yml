@@ -28,7 +28,7 @@ jobs:
     # Yarn command
        cmd: install
     - name: build production
-      run : yarn build
+      run : npm build
       working-directory: my-app
         
     - name: intalling surge
