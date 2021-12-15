@@ -29,6 +29,7 @@ jobs:
        cmd: install
     - name: build production
       run : yarn build
+      working-directory: my-app
         
     - name: intalling surge
       run : npm install -g surge
