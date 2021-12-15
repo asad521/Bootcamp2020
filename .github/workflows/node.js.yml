@@ -13,9 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./Bootcamp2020/my-app
+    
    
     steps:
     - uses: actions/checkout@v2
