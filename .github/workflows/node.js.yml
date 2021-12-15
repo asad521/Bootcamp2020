@@ -32,7 +32,10 @@ jobs:
       working-directory: my-app
         
     - name: intalling surge
+      working-directory: my-app
+
       run : npm install -g surge
       
     - name: deploying on surge
+      working-directory: my-app
       run : surge http://bootcamp20221.surge.sh/ --token ${{secrets.REACT_SURGE_TOKEN}}
